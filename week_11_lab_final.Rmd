@@ -8,6 +8,8 @@ Today we are going to finally calculate FST at individuals SNPs for your two foc
 First let's get the filtered vcf file that you made for just your two samples off of spydur and on to the Rstudio server. Below, you will need to change `netid` to your actual net id and `your_name` to the name of your folder that you were working in on Spydur. If you didn't name your files in the same way as the instructions two weeks ago, we might need to do some digging to find them but if your files are named as the lab indicated, they should copy correctly. 
 
 ```{bash}
+export LD_LIBRARY_PATH=/usr/lib64:/usr/local/sw/anaconda3/lib:/usr/pgsql-13/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/sw/anaconda3/lib
 scp netid@spydur:~/shared/your_name/lab_9/subset_snps_no_indels_no_repeats_filtered.recode.vcf ./
 scp netid@spydur:~/shared/your_name/lab_9/sample_names.txt ./
 
