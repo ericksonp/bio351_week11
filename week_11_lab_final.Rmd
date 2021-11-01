@@ -138,7 +138,17 @@ max.fst.snp
 **Question** Overall, how different are the allele frequencies for the peak SNPs on each chromosome? Do they seem like meaningful differences?
 **Answer here** 
 
-Sometimes individual SNPs can look a bit messy, but computing an average across a sliding window can help to smooth out the results and bring attention to genome regions that are most different across more than one SNP. `poolfstat` has a sliding window function built in that will average across a certain number of SNPs.  The first line of code makes an object called `sliding.window.50` which is a list of multiple additional R objects, including a dataframe with our important windowed FST results in it. We can extract this value using the `$` and turn it into a data.table called `sw.results` for further manipulation
+Sometimes individual SNPs can look a bit messy, but computing an average across a sliding window can help to smooth out the results and bring attention to genome regions that are most different across more than one SNP. 
+
+**Question** Explain what is meant by a "50-SNP sliding window"
+**Answer here**
+
+
+**Question** How does a SNP-based sliding window differ from a base-pair-based sliding window?
+**Answer here**
+
+
+`poolfstat` has a sliding window function built in that will average across a certain number of SNPs.  The first line of code makes an object called `sliding.window.50` which is a list of multiple additional R objects, including a dataframe with our important windowed FST results in it. We can extract this value using the `$` and turn it into a data.table called `sw.results` for further manipulation
 
 ```{r}
 sliding.window.50<-computeFST(vcf.dat,sliding.window.size=50)
@@ -160,6 +170,7 @@ ggplot(sw.results)+geom_point(aes(x=,
                                  color=))+
   geom_hline(yintercept=sw.threshold, linetype="dashed")
 ```
+
 **Question** How does the sliding window compare to the single-SNP calculations? Are there more or fewer peaks? Is the pattern similar? Why or why not? 
 **Answer here**
 
