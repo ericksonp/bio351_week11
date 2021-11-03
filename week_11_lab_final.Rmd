@@ -46,7 +46,7 @@ snp.info[,sample2.TD:=vcf.dat@readcoverage[,2]]
 snp.info
 
 ```
-Now in your `sample.info` table, calculate two new columns with the allele frequencies for each sample. Name the columns "sample1.AF" and "sample2.AF" but change sample1 and sample2 to your sample names. We will refer back to these allele frequencies later on after we've gotten more information. You can look back at the previous code chunk for the syntax of how to generate a new column, and think about how to make the calculation to generate values for that column. 
+Now in your `snp.info` table, calculate two new columns with the allele frequencies for each sample. Name the columns "sample1.AF" and "sample2.AF" but change sample1 and sample2 to your sample names. We will refer back to these allele frequencies later on after we've gotten more information. You can look back at the previous code chunk for the syntax of how to generate a new column, and think about how to make the calculation to generate values for that column. 
 
 ```{r}
 #create two new columns here. 
