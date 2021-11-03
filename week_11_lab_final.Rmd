@@ -114,13 +114,16 @@ data.to.plot<-
 Now let's make the plot. You have examples of lots of plots from previous work, which you can find from navigating through your old files in the files window to the right. What goes on the x and y axis? How have you seen Manhattan plots color coded before? Then add information to give the x and y axis appropriate labels. You can use `+ geom_hline(yintercept=threshold)` to add a horizontal "significance line"
 
 ```{r}
-#remove whole chunk
+#add your data table in the the ggplot() command and add x,y and color variables. Also add appropriate x and y axis labels
 ggplot()+geom_point(aes(x=  , 
                         y=  , 
                         color= ))+
   labs(x=" ", y=" ")+
   geom_hline(yintercept=threshold, linetype="dashed")
 ```
+**Question** Write an appropriate figure legend for this figure. 
+**Answer here** 
+
 **Question** Do you notice any locations in the genome that stand out? 
 **Answer here**
 
